@@ -12,7 +12,7 @@
 
 <table>
     <tr>
-        <th>名称</th>
+        <th width='80'>名称</th>
         <th>释义</th>
     </tr>
     <tr>
