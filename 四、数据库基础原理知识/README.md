@@ -12,7 +12,7 @@
 
 <table>
     <tr>
-        <th width='80'>名称</th>
+        <th width='100'>名称</th>
         <th>释义</th>
     </tr>
     <tr>
@@ -71,7 +71,7 @@
 
 <table>
     <tr>
-        <th></th>
+        <th width='100'></th>
         <th>MyISAM</th>
         <th>InnoDB</th>
     </tr>
