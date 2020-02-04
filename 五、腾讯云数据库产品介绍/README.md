@@ -7,11 +7,11 @@
     <tr>
         <th width='100'>产品大类</th>
         <th width='100'>数据库名称</th>
-        <th width='200'>简介</th>
+        <th width='260'>简介</th>
         <th>特性</th>
     </tr>
     <tr>
-        <td>关系型数据库</td>
+        <td colspan="8">关系型数据库</td>
         <td>云数据库MySQL</td>
         <td>MySQL 是世界上最流行的开源关系数据库，通过云数据库 MySQL，您在几分钟内即可部署可扩展的 MySQL 数据库实例。不仅经济实惠，而且可以弹性调整硬件容量的大小而无需停机。</td>
         <td>
@@ -27,7 +27,6 @@
         </td>
     </tr>
     <tr>
-        <td></td>
         <td>云数据库MariaDB</td>
         <td>MariaDB 是在 MySQL 版权被 Oracle 收购后，由 MySQL 创始人 Monty 创立，其版权授予了“MariaDB基金会（非营利性组织）”以保证 MariaDB 永远开源，良好的开源策略，是企业级应用的最优选择，主流开源社区系统/软件的数据库系统，均已默认配置 MariaDB。</td>
         <td>
@@ -43,7 +42,6 @@
         </td>
     </tr>
     <tr>
-        <td></td>
         <td>云数据库PostgreSQL</td>
         <td>PostgreSQL是一种特性非常齐全的自由软件的对象-关系型数据库管理系统。PostgreSQL支持大部分的SQL标准并且提供了很多其他现代特性，如复杂查询、外键、触发器、视图、事务完整性、多版本并发控制等。</td>
         <td>
@@ -53,7 +51,6 @@
         </td>
     </tr>
     <tr>
-        <td></td>
         <td>分布式数据库TDSQL</td>
         <td>分布式数据库（Tencent Distributed SQL，TDSQL）是腾讯打造的一款分布式数据库产品，具备强一致高可用、全球部署架构、分布式水平扩展、高性能、企业级安全等特性，同时提供智能 DBA、自动化运营、监控告警等配套设施，为用户提供完整的分布式数据库解决方案。TDSQL 可以提供公有云、专有云两种部署方案，可以提供关系型数据库实例、分布式数据库实例、分析性数据库实例。</td>
         <td>
@@ -69,7 +66,6 @@
         </td>
     </tr>
     <tr>
-        <td></td>
         <td>分布式HTAP数据库TBase</td>
         <td>分布式HTAP数据库 TBase（TencentDB for TBase）是腾讯自主研发的分布式数据库系统，集高扩展性、高SQL兼容度、完整的分布式事务支持、多级容灾能力以及多维度资源隔离等能力于一身。TBase 强大的安全和容灾能力，已经成功应用在金融、政府、电信、医疗等行业的核心业务系统。同时，TBase 采用无共享的集群架构，为用户提供容灾、备份、恢复、监控、安全、审计等全套解决方案，适用于GB～PB级的海量 HTAP 场景。</td>
         <td>
@@ -80,7 +76,6 @@
         </td>
     </tr>
     <tr>
-        <td></td>
         <td>云数据库CynosDB</td>
         <td>腾讯云数据库 CynosDB（TencentDB for CynosDB） 是腾讯云自研的新一代高性能高可用的企业级分布式云数据库。融合了传统数据库、云计算与新硬件技术的优势，100%兼容 MySQL 和 PostgreSQL</td>
         <td>
@@ -93,7 +88,6 @@
         </td>
     </tr>
     <tr>
-        <td></td>
         <td>云数据库SQL Server</td>
         <td>腾讯云数据库 SQL Server （TencentDB for SQL Server）是业界最常用的商用数据库之一，对基于 Windows 架构的应用程序具有完美的支持。SQL Server 是Microsoft 公司推出的关系型数据库管理系统。具有使用方便可伸缩性好与相关软件集成程度高等优点，可跨越从运行Microsoft Windows 98 的膝上型电脑到运行Microsoft Windows 2012 的大型多处理器的服务器等多种平台使用。</td>
         <td>
@@ -106,7 +100,6 @@
         </td>
     </tr>
     <tr>
-        <td></td>
         <td>数据库一体机TData</td>
         <td>数据库一体机 TData 是融合了高性能计算、热插拔闪存、Infiniband 网络、RDMA 远程直接存取数据的数据库解决方案，为用户提供高可用、易扩展、高性能的数据库服务</td>
         <td>
@@ -119,7 +112,7 @@
         </td>
     </tr>
     <tr>
-        <td>NoSQL数据库</td>
+        <td colspan="3">NoSQL数据库</td>
         <td>云数据库Redis</td>
         <td>腾讯云数据库 Redis（TencentDB for Redis）是腾讯云打造的兼容 Redis 协议的缓存和存储服务。</td>
         <td>
@@ -134,7 +127,6 @@
         </td>
     </tr>
     <tr>
-        <td></td>
         <td>云数据库MongoDB</td>
         <td>腾讯云数据库 MongoDB（TencentDB for MongoDB） 是腾讯云基于全球广受欢迎的 MongoDB 打造的高性能 NoSQL 数据库，100% 完全兼容 MongoDB 协议</td>
         <td>
@@ -150,7 +142,6 @@
         </td>
     </tr>
     <tr>
-        <td></td>
         <td>云数据库Memcached</td>
         <td>腾讯云数据库 Memcached（TencentDB for Memcached）是腾讯自主研发的极高性能、内存级、持久化、分布式 Key-Value 存储服务。</td>
         <td>
