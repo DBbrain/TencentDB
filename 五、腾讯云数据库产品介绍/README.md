@@ -5,9 +5,9 @@
 
 <table>
     <tr>
-        <th>产品大类</th>
-        <th>数据库名称</th>
-        <th>简介</th>
+        <th width='100'>产品大类</th>
+        <th width='100'>数据库名称</th>
+        <th width='200'>简介</th>
         <th>特性</th>
     </tr>
     <tr>
