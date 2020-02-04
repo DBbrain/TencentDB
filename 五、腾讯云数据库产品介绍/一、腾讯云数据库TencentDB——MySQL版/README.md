@@ -95,13 +95,13 @@ b. JRT 0072-2012 金融行业信息系统信息安全等级保护测评指南；
 云数据库MySQL 在互联网/移动APP 中作为服务端最终数据落地存储介质，针对行业读多写少的场景，可将热点库增加只读实例，大幅提升读取能力。
 ### 7.3、金融场景
 <img src='https://pic2.zhimg.com/80/v2-7185bb8493ad7cbc0013586b64570b99_hd.jpg'>
-<div style='display: inline-block;color: #999;' align='center'>图示5-3</div>
+<div style='display: inline-block;color: #999999;' align='center'>图示5-3</div>
 
 金融行业的海量的金融数据库，与业务强绑定，业务可靠性和优质体验是金融行业的首要需求。金融行业属于强监管行业，数据泄露或破坏对个人、社会乃至国家影响极大，因此其对安全性的要求是重中之重。云数据库可以为客户提供安全审计、跨地域容灾、数据强一致的数据库服务，保证用户的金融数据安全高可靠。
 
 ### 7.4、电商场景
 <img src='https://pic1.zhimg.com/80/v2-b1770813255d24bc1b5af7e8da212a40_hd.jpg'>
-<div style='display: inline-block;color: #999;' align='center'>图示5-4</div>
+<div style='display: inline-block;color: #999999;' align='center'>图示5-4</div>
 
 电商行业的数据量大，且周期性会有大促等活动，云数据库MySQL 高性能特性以及 Redis 快速读写能力帮助用户在活动大促时解决访问高峰带来的请求压力。
 
