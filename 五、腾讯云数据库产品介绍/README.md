@@ -7,7 +7,7 @@
     <tr>
         <th width='100'>产品大类</th>
         <th width='100'>数据库名称</th>
-        <th width='260'>简介</th>
+        <th width='300'>简介</th>
         <th>特性</th>
     </tr>
     <tr>
@@ -112,7 +112,7 @@
         </td>
     </tr>
     <tr>
-        <td rowspan="3">NoSQL数据库</td>
+        <td rowspan="2">NoSQL数据库</td>
         <td>云数据库Redis</td>
         <td>腾讯云数据库 Redis（TencentDB for Redis）是腾讯云打造的兼容 Redis 协议的缓存和存储服务。</td>
         <td>
