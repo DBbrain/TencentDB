@@ -11,7 +11,7 @@
         <th>特性</th>
     </tr>
     <tr>
-        <td colspan="8">关系型数据库</td>
+        <td rowspan="8">关系型数据库</td>
         <td>云数据库MySQL</td>
         <td>MySQL 是世界上最流行的开源关系数据库，通过云数据库 MySQL，您在几分钟内即可部署可扩展的 MySQL 数据库实例。不仅经济实惠，而且可以弹性调整硬件容量的大小而无需停机。</td>
         <td>
@@ -112,7 +112,7 @@
         </td>
     </tr>
     <tr>
-        <td colspan="3">NoSQL数据库</td>
+        <td rowspan="3">NoSQL数据库</td>
         <td>云数据库Redis</td>
         <td>腾讯云数据库 Redis（TencentDB for Redis）是腾讯云打造的兼容 Redis 协议的缓存和存储服务。</td>
         <td>
