@@ -82,7 +82,7 @@ b. JRT 0072-2012 金融行业信息系统信息安全等级保护测评指南；
 腾讯云数据库MySQL主要应用于游戏、互联网/移动app、金融和电商等场景，下面我们来一起看一下这几个场景下腾讯云MySQL的应用方式：
 ### 7.1、游戏应用场景
 <img src='https://pic3.zhimg.com/80/v2-1712ab19ea867d9a55873cb4eb6a34ae_hd.jpg'>
-<div style='display: inline-block;color: #999;' align='center'>图示5-1</div>
+<div align='center'><font size=3 color=#cccccc>图示5-1</font></div>
 
 游戏行业游戏玩家数据量大，多个分区数据服务，每个分区都需要快速读取数据；开服合服等场景多，对数据库的需求较为灵活，不同业务场景数据需求不同，涉及到需要弹性扩容和快速回档的业务。
 
@@ -90,18 +90,18 @@ b. JRT 0072-2012 金融行业信息系统信息安全等级保护测评指南；
 
 ### 7.2、互联网/移动APP应用场景
 <img src='https://pic2.zhimg.com/80/v2-922226fe67f55e01874d300ba3847211_hd.jpg'>
-<div style='display: inline-block;color: #999;' align='center'>图示5-2</div>
+<div align='center'><font size=3 color=#cccccc>图示5-2</font></div>
 
 云数据库MySQL 在互联网/移动APP 中作为服务端最终数据落地存储介质，针对行业读多写少的场景，可将热点库增加只读实例，大幅提升读取能力。
 ### 7.3、金融场景
 <img src='https://pic2.zhimg.com/80/v2-7185bb8493ad7cbc0013586b64570b99_hd.jpg'>
-<div style='display: inline-block;color: #999999;' align='center'>图示5-3</div>
+<div align='center'><font size=3 color=#cccccc>图示5-3</font></div>
 
 金融行业的海量的金融数据库，与业务强绑定，业务可靠性和优质体验是金融行业的首要需求。金融行业属于强监管行业，数据泄露或破坏对个人、社会乃至国家影响极大，因此其对安全性的要求是重中之重。云数据库可以为客户提供安全审计、跨地域容灾、数据强一致的数据库服务，保证用户的金融数据安全高可靠。
 
 ### 7.4、电商场景
 <img src='https://pic1.zhimg.com/80/v2-b1770813255d24bc1b5af7e8da212a40_hd.jpg'>
-<div style='display: inline-block;color: #999999;' align='center'>图示5-4</div>
+<div align='center'><font size=3 color=#cccccc>图示5-4</font></div>
 
 电商行业的数据量大，且周期性会有大促等活动，云数据库MySQL 高性能特性以及 Redis 快速读写能力帮助用户在活动大促时解决访问高峰带来的请求压力。
 
