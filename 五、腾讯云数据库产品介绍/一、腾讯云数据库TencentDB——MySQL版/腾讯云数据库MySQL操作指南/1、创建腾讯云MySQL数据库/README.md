@@ -49,4 +49,3 @@
 **外网访问**：通过外网地址访问云数据库 MySQL。外网访问需要开启数据库实例的外网地址，此操作会使用户的数据库服务暴露在公网上，可能导致数据库被入侵或攻击。建议用户使用内网访问的方式来登录数据库。
 访问数据库之前一定要确保cvm和数据库的网络是一致的，用户可在数据库管理后台将MySQL添加到相关服务器下，检测是否可以走通
 
-<img src='https://raw.githubusercontent.com/DBbrain/Gallery/master/tencentdb5-8.jpg?token=ANW4AUHGATXWQ7QT4JL73OC6ID4BI'>
