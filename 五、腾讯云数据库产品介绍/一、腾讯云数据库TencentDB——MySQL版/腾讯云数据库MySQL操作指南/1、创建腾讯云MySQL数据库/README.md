@@ -1,5 +1,5 @@
 # 创建腾讯云MySQL数据库
-<img src='https://raw.githubusercontent.com/DBbrain/Gallery/master/tencentdb5-5.jpg?token=ANW4AUGL32GGK6ATOP2FVZC6ID2U2'>
+<img src='../../../../tencentdb5-5.jpg'>
 下面我们先介绍如何创建腾讯云MySQL数据库
 
 ## 1、创建实例
@@ -28,7 +28,7 @@
 ## 2.初始化实例
 
 1.在MySQL列表中点击实例初始化
-<img src='https://raw.githubusercontent.com/DBbrain/Gallery/master/tencentdb5-6.jpg?token=ANW4AUET664KTWXNRFPGNN26ID3SE'>
+
 2.在弹出的对话框配置相关参数，点击确认大约等待50s后完成初始化
 
 (1)	支持字符集：支持 LATIN1 、GBK、UTF8 、UTF8MB4 字符集，默认字符集编码格式是 LATIN1，即 ISO-8859-1 编码格式。初始化实例后，亦可在控制台实例详情页修改字符集。
@@ -40,7 +40,6 @@
 (4)	设置root帐号密码：新创建的 MySQL 数据库的用户名默认为 root，此处用来设置该 root 帐号的密码。
 
 (5)	确认密码：再次输入密码。
-<img src='https://raw.githubusercontent.com/DBbrain/Gallery/master/tencentdb5-7.jpg?token=ANW4AUH6SFNH2NEMO4SLCT26ID3ZC'>
 
 返回sql列表中，当我们看到实例【状态】为【运行中】即完成了实例创建。创建完了实例后，我们来看一下如何访问已建好的MySQL，**访问数据库有两种方式**：
 
