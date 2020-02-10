@@ -1,5 +1,5 @@
 # 创建腾讯云MySQL数据库
-<img src='../../../../tencentdb5-5.jpg'>
+<img src='../../../../Gallerys/tencentdb5-5.jpg'>
 下面我们先介绍如何创建腾讯云MySQL数据库
 
 ## 1、创建实例
