@@ -112,7 +112,10 @@ wget -c '备份文件下载地址' -O 自定义文件名.xb
 
 6.**修改文件属性**
 
-修改文件属性，并检查文件所属为 mysql 用户。命令：chown -R mysql:mysql /data
+修改文件属性，并检查文件所属为 mysql 用户。命令：
+```angular2html
+chown -R mysql:mysql /data
+```
 <img src='../../../../Gallerys/tencentdb5-26.jpg'>
 
 7.**启动mysqld进程并登陆验证**
@@ -133,7 +136,10 @@ wget -c '备份文件下载地址' -O 自定义文件名.xb
 
 (2)	在实例管理页，选择【备份恢复】>【数据备份列表】页， 选择需要下载的备份，在操作列单击【下载】。
 
-(3)	在弹出的对话框，推荐您复制下载地址，并登录到云数据库所在 VPC 下的 CVM（Linux 系统） 中，运用 wget 命令进行内网高速下载，更高效：wget -c 'https://mysql-database-backup-bj-118.cos.ap-beijing.myqcloud.com/12427%2Fmysql%2F42d-11ea-b887-6c0b82b%2Fdata%2Fautomatic-delete%2F2019-11-28%2Fautomatic%2Fxtrabackup%2Fbk_204_10385%2Fcdb-1pe7bexs_backup_20191128044644.xb?sign=q-sign-algorithm%3Dsha1%26q-ak%3D1%26q-sign-time%3D1574269%3B1575417469%26q-key-time%3D1575374269%3B1517469%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Dfb8fad13c4ed&response-content-disposition=attachment%3Bfilename%3D%2141731_backup_20191128044644.xb%22&response-content-type=application%2Foctet-stream' -O test0.xb
+(3)	在弹出的对话框，推荐您复制下载地址，并登录到云数据库所在 VPC 下的 CVM（Linux 系统） 中，运用 wget 命令进行内网高速下载，更高效：
+```angular2html
+wget -c 'https://mysql-database-backup-bj-118.cos.ap-beijing.myqcloud.com/12427%2Fmysql%2F42d-11ea-b887-6c0b82b%2Fdata%2Fautomatic-delete%2F2019-11-28%2Fautomatic%2Fxtrabackup%2Fbk_204_10385%2Fcdb-1pe7bexs_backup_20191128044644.xb?sign=q-sign-algorithm%3Dsha1%26q-ak%3D1%26q-sign-time%3D1574269%3B1575417469%26q-key-time%3D1575374269%3B1517469%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Dfb8fad13c4ed&response-content-disposition=attachment%3Bfilename%3D%2141731_backup_20191128044644.xb%22&response-content-type=application%2Foctet-stream' -O test0.xb
+```
 
 2.**解包备份文件**
 
