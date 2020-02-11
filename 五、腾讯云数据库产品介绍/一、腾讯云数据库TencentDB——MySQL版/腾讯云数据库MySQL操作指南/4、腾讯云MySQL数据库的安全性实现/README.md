@@ -121,10 +121,16 @@
 关于监控指标，腾讯云提供了以下监控指标：
 <table>
     <tr>
-        <th>每秒执行操作数</th>
-        <th>qps</th>
-        <th>次/秒</th>
-        <th>数据库每秒执行的 SQL 数（含 insert、select、update、delete、replace），QPS 指标主要体现 TencentDB 实例的实际处理能力</th>
+        <th width=150>指标中文名</th>
+        <th>指标英文名</th>
+        <th width=30>单位</th>
+        <th>指标说明</th>
+    </tr>
+    <tr>
+        <td>每秒执行操作数</td>
+        <td>qps</td>
+        <td>次/秒</td>
+        <td>数据库每秒执行的 SQL 数（含 insert、select、update、delete、replace），QPS 指标主要体现 TencentDB 实例的实际处理能力</td>
     </tr>
     <tr>
         <td>慢查询数</td>
