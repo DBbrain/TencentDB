@@ -51,14 +51,15 @@
 数据备份好之后，让我们来一起看一下如何使用备份文件恢复数据库，上面我们提到备份有逻辑备份和物理备份两种，同样的这两种的恢复方式也不一样。
 
 ## 3、物理备份恢复数据
-1.下载备份文件
+1.**下载备份文件**
+
 (1)	通过管理台手动下载：登陆MySQL控制台，在实例管理页选择【备份恢复】>【数据备份列表】页， 选择需要下载的备份，在操作列单击【下载】
 
 (2)	通过wget命令进行下载：<br/>
 wget -c '备份文件下载地址' -O 自定义文件名.xb
 <img src='../../../../Gallerys/tencentdb5-21.jpg'>
 
-2.解包备份文件
+2.**解包备份文件**
 
 (1)	使用 xbstream 命令将备份文件解包到目标目录。
 
@@ -69,6 +70,105 @@ wget -c '备份文件下载地址' -O 自定义文件名.xb
 </ul>
 解包结果如下图所示：
 <img src='../../../../Gallerys/tencentdb5-22.jpg'>
+
+3.**解压备份文件**
+
+(1)	下载qpress工具（解压工具）
+
+(2)	wget http://www.quicklz.com/qpress-11-linux-x64.tar
+
+(3)	解压qpress二进制文件
+
+(4)	tar -xf qpress-11-linux-x64.tar -C /usr/local/bin
+
+(5)	source /etc/profile
+
+(6)	将目标目录下所有以.qp结尾的文件都解压出来
+
+(7)	xtrabackup --decompress --target-dir=/data
+<img src='../../../../Gallerys/tencentdb5-23.jpg'>
+
+4.**prepare备份文件**
+
+备份解压出来之后，需要进行apply log操作：xtrabackup --prepare  --target-dir=/data
+<img src='../../../../Gallerys/tencentdb5-24.jpg'>
+
+5.**修改配置文件**
+
+(1)	打开backup-my.cnf文件
+
+(2)	vi /data/backup-my.cnf
+
+(3)	由于存在的版本问题，请将解压文件backup-my.cnf中如下参数进行注释
+<ul>
+    <li>innodb_checksum_algorithm</li>
+    <li>innodb_log_checksum_algorithm</li>
+    <li>innodb_fast_checksum</li>
+    <li>innodb_page_size</li>
+    <li>innodb_log_block_size</li>
+    <li>redo_log_version</li>
+</ul>
+<img src='../../../../Gallerys/tencentdb5-25.jpg'>
+
+6.**修改文件属性**
+
+修改文件属性，并检查文件所属为 mysql 用户。命令：chown -R mysql:mysql /data
+<img src='../../../../Gallerys/tencentdb5-26.jpg'>
+
+7.**启动mysqld进程并登陆验证**
+
+(1)	启动mysqld进程：mysqld_safe --defaults-file=/data/backup-my.cnf --user=mysql --datadir=/data &
+
+(2)	客户端登陆mysql验证
+
+(3)	mysql  -uroot
+<img src='../../../../Gallerys/tencentdb5-27.jpg'>
+
+## 4.逻辑备份恢复数据库
+前提条件：需要使用XtraBackup 工具
+
+1.**下载备份文件**
+
+(1)	登录云数据库 MySQL 控制台，在实例列表中，单击实例名或操作列的【管理】，进入实例管理页面。
+
+(2)	在实例管理页，选择【备份恢复】>【数据备份列表】页， 选择需要下载的备份，在操作列单击【下载】。
+
+(3)	在弹出的对话框，推荐您复制下载地址，并登录到云数据库所在 VPC 下的 CVM（Linux 系统） 中，运用 wget 命令进行内网高速下载，更高效：wget -c 'https://mysql-database-backup-bj-118.cos.ap-beijing.myqcloud.com/12427%2Fmysql%2F42d-11ea-b887-6c0b82b%2Fdata%2Fautomatic-delete%2F2019-11-28%2Fautomatic%2Fxtrabackup%2Fbk_204_10385%2Fcdb-1pe7bexs_backup_20191128044644.xb?sign=q-sign-algorithm%3Dsha1%26q-ak%3D1%26q-sign-time%3D1574269%3B1575417469%26q-key-time%3D1575374269%3B1517469%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Dfb8fad13c4ed&response-content-disposition=attachment%3Bfilename%3D%2141731_backup_20191128044644.xb%22&response-content-type=application%2Foctet-stream' -O test0.xb
+
+2.**解包备份文件**
+
+使用 xbstream 解包备份文件。
+```
+xbstream -x < test0.xb
+```
+解包结果如下所示：
+<img src='../../../../Gallerys/tencentdb5-28.jpg'>
+
+3.**解压备份文件**
+
+(1)	通过如下命令下载 qpress 工具。
+
+(2)	wget http://www.quicklz.com/qpress-11-linux-x64.tar
+
+(3)	通过如下命令解出 qpress 二进制文件。
+
+(4)	tar -xf qpress-11-linux-x64.tar -C /usr/local/bin
+
+(5)	source /etc/profile
+
+(6)	使用 qpress 解压备份文件。
+```angular2html
+qpress -d cdb-jp0zua5k_backup_20191202182218.sql.qp
+```
+解压结果如下所示：
+<img src='../../../../Gallerys/tencentdb5-29.jpg'>
+
+4.**导入数据库**
+执行如下命令导入到数据库：
+```angular2html
+mysql -uroot -P3306 -h127.0.0.1 -p < cdb-jp0zua5k_backup_20191202182218.sql
+```
+
 
 
 
