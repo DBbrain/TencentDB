@@ -122,7 +122,7 @@
 <table>
     <tr>
         <th width=150>指标中文名</th>
-        <th>指标英文名</th>
+        <th width=150>指标英文名</th>
         <th width=30>单位</th>
         <th>指标说明</th>
     </tr>
