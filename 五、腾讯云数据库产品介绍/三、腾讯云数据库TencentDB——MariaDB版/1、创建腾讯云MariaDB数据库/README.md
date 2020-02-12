@@ -104,7 +104,7 @@
 ```apacheconfig
 yum install mysql
 mysql -h hostname -u username -p
-请将 hostname 替换为目标 MariaDB 数据库实例的内网 IP 地址，username 	替换为之前创建的用户名，并在提示Enter password：后输入用户名对应的密码。
+请将 hostname 替换为目标 MariaDB 数据库实例的内网 IP 地址，username 替换为之前创建的用户名，并在提示Enter password：后输入用户名对应的密码。
 ```
 4.在 MySQL> 提示符下可以发送 SQL 语句到要执行的 MariaDB 服务器，具体命令行请参见<a href="https://dev.mysql.com/doc/refman/5.7/en/mysql-commands.html">此网站</a>。
 
@@ -129,6 +129,7 @@ mysql -h hostname -u username -p
     <li>密码：用户名对应的密码。</li>
     <li>端口：外网域名对应的端口号。</li>
 </ul>
+
 (4)	从 Linux 系统登录
 
 以 CentOS 7.2 64位系统的 CVM 为例，在官网下载安装 MySQL 客户端。具	体命令为：
@@ -137,7 +138,7 @@ yum intall mysql
 ```
 使用 MySQL 命令行工具登录到 MariaDB 数据库。相关命令为：
 ```apacheconfig
-mysql -h 	hostname -P port -u username -p
+mysql -h hostname -P port -u username -p
 ```
 请将 hostname 替换为目标 MariaDB 数据库实例的外网域名，username 替换为之前创建的用户名，并在提示 Enter password：后输入用户名对应的密码。
 
