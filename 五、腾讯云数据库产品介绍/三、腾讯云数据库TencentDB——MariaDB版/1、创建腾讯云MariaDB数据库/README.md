@@ -120,9 +120,9 @@ mysql -h hostname -u username -p
 
 (1)	从 Windows 系统登录
 
-(2)	下载 MariaDB 客户端并安装，推荐您 下载 sqlyog 。
+下载 MariaDB 客户端并安装，推荐您 下载 sqlyog 。
 
-(3)	打开 sqlyog，输入 MariaDB 数据库实例的外网域名和端口号，数据库帐号以及密码。
+打开 sqlyog，输入 MariaDB 数据库实例的外网域名和端口号，数据库帐号以及密码。
 <ul>
     <li>我的SQL主机地址：输入外网域名。</li>
     <li>用户名：前提条件中创建的用户名。</li>
