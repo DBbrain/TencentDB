@@ -114,7 +114,7 @@ yum install MariaDB-client
 ```apacheconfig
 wget  --content-disposition 'http://169.254.0.27:8083/2/noshard1/set_1464144850_587/1464552298xxxxxxxx'
 ```
-###3.5、通过备份文件恢复数据库（未加密）
+### 3.5、通过备份文件恢复数据库（未加密）
 1.进入备份文件下载目录，通过 lz4 解压冷备文件
 ```apacheconfig
 lz4 -d set_1464144850_587.1464552298.xtrabackup.lz4
@@ -201,20 +201,20 @@ innobackupex --apply-log --rebuild-indexes  --use-memory=1G  --tmpdir=/tmp ./bac
 
 <table>
     <tr>
-        <td>参数解释：</td>
+        <td width=100>参数解释：</td>
         <td>
             1)	--role：格式固定，填入 kmsTDSQLRole 即可。
-            2)	--secret_id、--secret_key：授权信息，可在【访问管理】中的API密钥管理查询。
-            3)	--region：地域信息，可在 KMS公共参数中查询。
-            4)	--ciphertext：数据密钥密文。
+            <br/>2)	--secret_id、--secret_key：授权信息，可在【访问管理】中的API密钥管理查询。
+            <br/>3)	--region：地域信息，可在 KMS公共参数中查询。
+            <br/>4)	--ciphertext：数据密钥密文。
         </td>
     </tr>
     <tr>
         <td>使用 demo 案例：</td>
         <td>
             1)	python ./kms_tool.py --role="qcs::cam::uin/xxxxxxxxx:roleName/kmsTDSQLRole" 
-            2)	--secret_id="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" --secret_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-            3)	--region="ap-hongkong" --ciphertext="CtFlCTPsA0+LilyvZ5V4nsEi6qSIA/KEhVeE8zQFIGfBwzXiMShQZIYYUt9KBWAUsHcfLQ0Z5feADH2D49/nOw==-k-fKVP3WIlGpg8m9LMW4jEkQ==-k-zudP3Tz4jxrvjs7zKkuKU+0V/gVVaNRRIIaRl/+83qCinaBgsLQbU5e1MpW4q/IJKpNXnb9N9/rO5Es03fh7PU9n8Sjex6mnl+YKV1SMQog+RJ1E8bNmwx/22hhHb/1B5LGpwB8tbXKD3gL0tZwSJvV2QxSaUnONh5+6ssb2cQZI8MhcBBhGj9oXtbL6OC74PuDO1D/AsQ6qBLIqC2bTSA68s8Q="
+            <br/>2)	--secret_id="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" --secret_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            <br/>3)	--region="ap-hongkong" --ciphertext="CtFlCTPsA0+LilyvZ5V4nsEi6qSIA/KEhVeE8zQFIGfBwzXiMShQZIYYUt9KBWAUsHcfLQ0Z5feADH2D49/nOw==-k-fKVP3WIlGpg8m9LMW4jEkQ==-k-zudP3Tz4jxrvjs7zKkuKU+0V/gVVaNRRIIaRl/+83qCinaBgsLQbU5e1MpW4q/IJKpNXnb9N9/rO5Es03fh7PU9n8Sjex6mnl+YKV1SMQog+RJ1E8bNmwx/22hhHb/1B5LGpwB8tbXKD3gL0tZwSJvV2QxSaUnONh5+6ssb2cQZI8MhcBBhGj9oXtbL6OC74PuDO1D/AsQ6qBLIqC2bTSA68s8Q="
         </td>
     </tr>
 </table>
