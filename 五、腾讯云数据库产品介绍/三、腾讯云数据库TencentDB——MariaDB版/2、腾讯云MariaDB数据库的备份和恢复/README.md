@@ -210,7 +210,7 @@ innobackupex --apply-log --rebuild-indexes  --use-memory=1G  --tmpdir=/tmp ./bac
         </td>
     </tr>
     <tr>
-        <td>使用 demo 案例：</td>
+        <td width="200px">使用 demo 案例：</td>
         <td>
             1)	python ./kms_tool.py --role="qcs::cam::uin/xxxxxxxxx:roleName/kmsTDSQLRole" 
             <br/>2)	--secret_id="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" --secret_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
