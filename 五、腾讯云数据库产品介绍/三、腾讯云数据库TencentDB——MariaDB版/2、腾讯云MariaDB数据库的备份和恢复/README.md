@@ -199,7 +199,7 @@ innobackupex --apply-log --rebuild-indexes  --use-memory=1G  --tmpdir=/tmp ./bac
 
 (2)	通过腾讯云提供的 Python 脚本./kms_tool.py，获取数据密钥明文。
 
-<table style=“table-layout:fixed;”>
+<table style="table-layout:fixed;">
     <tr>
         <td width="200px">参数解释：</td>
         <td>
