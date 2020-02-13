@@ -201,7 +201,7 @@ innobackupex --apply-log --rebuild-indexes  --use-memory=1G  --tmpdir=/tmp ./bac
 
 <table>
     <tr>
-        <td width=100>参数解释：</td>
+        <td width=200>参数解释：</td>
         <td>
             1)	--role：格式固定，填入 kmsTDSQLRole 即可。
             <br/>2)	--secret_id、--secret_key：授权信息，可在【访问管理】中的API密钥管理查询。
