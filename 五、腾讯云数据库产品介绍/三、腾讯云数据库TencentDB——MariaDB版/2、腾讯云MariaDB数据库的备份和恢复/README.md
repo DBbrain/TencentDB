@@ -201,7 +201,7 @@ innobackupex --apply-log --rebuild-indexes  --use-memory=1G  --tmpdir=/tmp ./bac
 
 <table>
     <tr>
-        <td width="200">参数解释：</td>
+        <td width="200px">参数解释：</td>
         <td>
             1)	--role：格式固定，填入 kmsTDSQLRole 即可。
             <br/>2)	--secret_id、--secret_key：授权信息，可在【访问管理】中的API密钥管理查询。
@@ -210,7 +210,7 @@ innobackupex --apply-log --rebuild-indexes  --use-memory=1G  --tmpdir=/tmp ./bac
         </td>
     </tr>
     <tr>
-        <td width="200">使用 demo 案例：</td>
+        <td>使用 demo 案例：</td>
         <td>
             1)	python ./kms_tool.py --role="qcs::cam::uin/xxxxxxxxx:roleName/kmsTDSQLRole" 
             <br/>2)	--secret_id="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" --secret_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
