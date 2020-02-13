@@ -82,35 +82,35 @@ MariaDB 可通过回档功能来查看历史数据，如果您需要在本地恢
 
 1.添加 yum 源。
 ```apacheconfig
-(1)vi /etc/yum.repos.d/mariadb-10.0.10.repo):# MariaDB 10.0 CentOS repository list - created 2016-05-30 02:16 UTC# http://downloads.mariadb.org/mariadb/repositories/
-(2)[mariadb]
-(3)name = MariaDB# baseurl = http://yum.mariadb.org/10.0/centos7-amd64
-(4)baseurl = http://archive.mariadb.org/mariadb-10.0.10/yum/centos6-amd64/
-(5)gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-(6)gpgcheck=0
+(1) vi /etc/yum.repos.d/mariadb-10.0.10.repo):# MariaDB 10.0 CentOS repository list - created 2016-05-30 02:16 UTC# http://downloads.mariadb.org/mariadb/repositories/
+(2) [mariadb]
+(3) name = MariaDB# baseurl = http://yum.mariadb.org/10.0/centos7-amd64
+(4) baseurl = http://archive.mariadb.org/mariadb-10.0.10/yum/centos6-amd64/
+(5) gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+(6) gpgcheck=0
 ```
 2.检查配置 yum 源对应的 MariaDB 版本是否为10.0.10。
 ```apacheconfig
-(1)	yum makecache
-(2)	yum info MariaDB-server
+(1) yum makecache
+(2) yum info MariaDB-server
 ```
 3.安装 MariaDB-server。
 ```apacheconfig
-(1)	yum install MariaDB-server
+yum install MariaDB-server
 ```
 4.说明：提示与旧版本冲突时，需要先移除之前的安装包，例如yum remove mariadb-libs。
 
 ### 3.3、安装辅助工具
 1.安装 MariaDB 客户端。
 ```apacheconfig
-(1)	yum install MariaDB-client
+yum install MariaDB-client
 ```
 2.安装 LZ4 解压软件，请参见 解压备份文件和日志文件。LZ4 默认安装在mysqlagent/bin目录下，也可以将其放置在/usr/bin目录下，当环境变量引用。
 ```apacheconfig
-(1)	yum install -y lz4
-(2)	percona-xtrabackup
-(3)	yum install http://www.percona.com/downloads/percona-release/redhat/0.1-3/percona-release-0.1-3.noarch.rpm
-(4)	yum install percona-xtrabackup
+(1) yum install -y lz4
+(2) percona-xtrabackup
+(3) yum install http://www.percona.com/downloads/percona-release/redhat/0.1-3/percona-release-0.1-3.noarch.rpm
+(4) yum install percona-xtrabackup
 ```
 ### 3.4、下载备份
 在 MariaDB 控制台，单击实例名进入实例管理页，在【备份与恢复】页获取备份下载地址。下载命令示例：
@@ -125,15 +125,15 @@ lz4 -d set_1464144850_587.1464552298.xtrabackup.lz4
 
 2.使用 xbstream 工具解压到临时目录 xtrabackuptmp
 ```apacheconfig
-(1)	mkdir xtrabackuptmp/
-(2)	mv set_1464144850_587.1464552298.xtrabackup xtrabackuptmp/
-(3)	xbstream -x < set_1464144850_587.1464552298.xtrabackup
+(1) mkdir xtrabackuptmp/
+(2) mv set_1464144850_587.1464552298.xtrabackup xtrabackuptmp/
+(3) xbstream -x < set_1464144850_587.1464552298.xtrabackup
 ```
  
 3.使用 innobackupex 应用日志
 ```apacheconfig
-(1)	mkdir /root/dblogs_tmp
-(2)	innobackupex --apply-log  --use-memory=1G --tmpdir='/root/dblogs_tmp/' /root/xtrabackuptmp/
+(1) mkdir /root/dblogs_tmp
+(2) innobackupex --apply-log  --use-memory=1G --tmpdir='/root/dblogs_tmp/' /root/xtrabackuptmp/
 ```
 操作成功后，会显示completed OK!
  
@@ -148,15 +148,15 @@ mv /var/lib/mysql/* /var/lib/mysql-backup
 
 修改数据库参数文件(/etc/my.cnf.d/server.cnf)，具体参数数值请参考解压文件中backup-my.cnf的参数。不能直接用 backup-my.cnf 替换参数文件。
 ```apacheconfig
-(1)	[mysqld]
-(2)	skip-name-resolve
-(3)	datadir=/var/lib/mysql
-(4)	innodb_checksum_algorithm=innodb
-(5)	innodb_log_checksum_algorithm=innodb
-(6)	innodb_data_file_path=ibdata1:2G:autoextend
-(7)	innodb_log_files_in_group=4
-(8)	innodb_log_file_size=1073741824
-(9)	innodb_page_size=4096
+(1) [mysqld]
+(2) skip-name-resolve
+(3) datadir=/var/lib/mysql
+(4) innodb_checksum_algorithm=innodb
+(5) innodb_log_checksum_algorithm=innodb
+(6) innodb_data_file_path=ibdata1:2G:autoextend
+(7) innodb_log_files_in_group=4
+(8) innodb_log_file_size=1073741824
+(9) innodb_page_size=4096
 (10) innodb_log_block_size=512
 (11) innodb_undo_tablespaces=0
 ```
@@ -168,8 +168,8 @@ innobackupex --defaults-file=/etc/my.cnf --move-back /root/xtrabackuptmp/
  
 7.启动数据库
 ```apacheconfig
-(1)	chmod 777 -R /var/lib/mysql
-(2)	service start mysql，如果遇到启动失败，则需要检查错误信息，修复后再重新启动。
+(1) chmod 777 -R /var/lib/mysql
+(2) service start mysql，如果遇到启动失败，则需要检查错误信息，修复后再重新启动。
 ```
 8.连接数据库查看数据
 
