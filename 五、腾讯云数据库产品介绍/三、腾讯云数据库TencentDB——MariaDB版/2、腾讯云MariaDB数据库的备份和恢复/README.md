@@ -199,7 +199,7 @@ innobackupex --apply-log --rebuild-indexes  --use-memory=1G  --tmpdir=/tmp ./bac
 
 (2)	通过腾讯云提供的 Python 脚本./kms_tool.py，获取数据密钥明文。
 
-<table>
+<table style=“table-layout:fixed;”>
     <tr>
         <td width="200px">参数解释：</td>
         <td>
@@ -210,7 +210,7 @@ innobackupex --apply-log --rebuild-indexes  --use-memory=1G  --tmpdir=/tmp ./bac
         </td>
     </tr>
     <tr>
-        <td width="200px">使用 demo 案例：</td>
+        <td>使用 demo 案例：</td>
         <td>
             1)	python ./kms_tool.py --role="qcs::cam::uin/xxxxxxxxx:roleName/kmsTDSQLRole" 
             <br/>2)	--secret_id="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" --secret_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
