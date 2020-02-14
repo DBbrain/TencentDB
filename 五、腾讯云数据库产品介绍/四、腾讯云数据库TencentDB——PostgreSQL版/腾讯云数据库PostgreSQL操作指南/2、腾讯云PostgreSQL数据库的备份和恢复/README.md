@@ -36,7 +36,7 @@ mkdir recovery
 tar zxf 20170905010143.tar.gz –C recovery
 ```
  
-### 2.4（可选）安装相同版本的 PostgreSQL
+### 2.4、（可选）安装相同版本的 PostgreSQL
 如已安装可跳过此步骤，本示例采用 yum 源的安装方式，yum 源可至该地址查找您所需要的版本。
 
 ```apacheconfig
@@ -56,7 +56,7 @@ tar zxf 20170905010143.tar.gz –C recovery
 14. postgresql93-9.3.4-1PGDG.rhel6.x86_64
 15. postgresql93-server-9.3.4-1PGDG.rhel6.x86_64
 ```
-### 2.5修改配置文件
+### 2.5、修改配置文件
 
 将配置文件postgresql.conf中的以下选项注释掉，注释方法：在行首使用#。
 
@@ -73,12 +73,12 @@ tar zxf 20170905010143.tar.gz –C recovery
 9. synchronous_commit = local
 10. synchronous_standby_names = ''
 ```
-### 2.6更改文件夹权限
+### 2.6、更改文件夹权限
 ```apacheconfig
 chmod 0700 recovery
 ```
  
-### 2.7（可选）应用增量备份文件
+### 2.7、（可选）应用增量备份文件
 如果跳过该步骤，则数据库的内容为开始做全量备份时数据库的内容。
 
 说明：将 xlog 文件放入 pg_xlog 文件夹下，pg 会自动重放 xlog 日志。例如12:00时做的全量备份，如果在该全量备份的基础上，在 pg_xlog 文件夹下放置12:00至13:00的所有 xlog，则数据库能恢复到13:00时的数据内容。
@@ -87,11 +87,11 @@ chmod 0700 recovery
 ```apacheconfig
 tar zxf 20170904010214_20170905010205.tar.gz
 ```
-### 2.8启动数据库
+### 2.8、启动数据库
 ```apacheconfig
 pg_ctl start -D ~/recovery
 ```
-### 2.9登录验证
+### 2.9、登录验证
 登录数据库。
 
 通过手动导出数据进行恢复，您也可以手动导出备份数据，然后在腾讯云云服务器上进行恢复操作，该方案在 Windows 和 Linux 下同样适用，与物理文件所在的文件系统无关。
