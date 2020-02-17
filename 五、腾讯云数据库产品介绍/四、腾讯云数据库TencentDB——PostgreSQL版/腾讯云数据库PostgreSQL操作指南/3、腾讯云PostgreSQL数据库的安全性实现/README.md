@@ -9,7 +9,7 @@
         <th>指标中文名</th>
         <th>指标英文名</th>
         <th>指标含义</th>
-        <th>指标单位</th>
+        <th width=100>指标单位</th>
     </tr>
     <tr>
         <td>CPU 利用率</td>
