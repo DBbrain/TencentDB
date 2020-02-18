@@ -14,8 +14,8 @@
 ## 3、JavaScript Shell 交互连接
 mongo shell 是 MongoDB 自带的一种交互式 JavaScript shell。可在 shell 中使用命令行与 MongoDB 实例交互。您可以使用 mongo shell 查询和更新数据或执行管理操作。mongo shell 是 MongoDB 发行版的一部分，您需要先下载或者安装 MongoDB，然后再使用 mongo shell 连接至您的 MongoDB 实例。具体连接步骤如下：
 ```$xslt
-1.	cd <mongodb installation dir>
-2.	./bin/mongo -umongouser -plxh2081* 172.16.0.56:27017/admin
+1. cd <mongodb installation dir>
+2. ./bin/mongo -umongouser -plxh2081* 172.16.0.56:27017/admin
 ```
 **说明**：上例中，-u 参数指定用户名，-p 参数指定密码，172.16.0.56和27017分别指定 MongoDB 实例的 IP 和端口。
 
