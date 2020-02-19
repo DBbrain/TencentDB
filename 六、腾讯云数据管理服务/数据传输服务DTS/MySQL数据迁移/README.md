@@ -163,7 +163,6 @@ set global innodb_stats_on_metadata = 0;
 当迁移进度达到100%时，可单击右侧【完成】，完成迁移任务。
 
 ![image](../../../Gallerys/tencentdb5-51.jpg)
-
 单击【 完成 】效果如下：
 
 ![image](../../../Gallerys/tencentdb5-52.png)
