@@ -153,7 +153,6 @@ set global innodb_stats_on_metadata = 0;
 在迁移过程中，如果您需要撤销迁移，可以单击【 撤销 】按钮。
 
 ![image](../../../Gallerys/tencentdb5-49.jpg)
-
 撤销之后效果如下
 
 ![image](../../../Gallerys/tencentdb5-50.jpg)
@@ -167,7 +166,7 @@ set global innodb_stats_on_metadata = 0;
 
 单击【 完成 】效果如下：
 
-![image](../../../Gallerys/tencentdb5-52.jpg)
+![image](../../../Gallerys/tencentdb5-52.png)
 ![image](../../../Gallerys/tencentdb5-53.jpg)
 
 除了MySQL数据在线导入的情况外，腾讯云还可以对MySQL进行离线迁移。离线迁移这里给出了两种方法，一种是通过控制台迁移，一种是用命令工具进行迁移。
