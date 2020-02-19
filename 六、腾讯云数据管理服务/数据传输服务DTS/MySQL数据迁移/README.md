@@ -196,7 +196,7 @@ shell > mysql -h hostname -P port -u username -p -d dbname < bak_pathname
 
 ![image](../../../Gallerys/tencentdb6-10.jpg)
 
-
+4.选中需要导出的数据库，单击【下一步】。
 
 
 
