@@ -194,7 +194,7 @@ shell > mysql -h hostname -P port -u username -p -d dbname < bak_pathname
 
 3.选择【备份恢复】>【备份列表】页签，找到需要下载的备份文件，选择【下载】>【部分下载】。
 
-
+![image](../../../Gallerys/tencentdb6-10.jpg)
 
 
 
