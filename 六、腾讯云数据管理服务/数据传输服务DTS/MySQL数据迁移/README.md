@@ -66,7 +66,7 @@ set global innodb_stats_on_metadata = 0;
 
 填写任务设置、源库设置和目标库设置。如下图：
 
-![image](../../../../Gallerys/tencentdb5-45.jpg)
+![image](../../../Gallerys/tencentdb5-45.jpg)
 
 (1)	**任务设置**
 * 任务名称：为任务指定名称。
