@@ -56,3 +56,50 @@ set global binlog_format=ROW;
 set global binlog_row_image=FULL;                
 set global innodb_stats_on_metadata = 0;
 ```
+## 2、MySQL数据在线导入
+
+1.新建 DTS 数据迁移服务
+
+登录 DTS 控制台，进入【数据迁移】页面，单击【新建任务】。
+
+2.修改配置
+
+填写任务设置、源库设置和目标库设置。如下图：
+
+![image](../../../../Gallerys/tencentdb5-45.jpg)
+
+(1)	**任务设置**
+* 任务名称：为任务指定名称。
+* 定时执行：可为您的迁移任务指定开始时间。
+
+(2)	**源库设置**
+
+源库类型：目前支持有公网 IP 的 MySQL、云服务器上的自建 MySQL、专线接入腾讯云的 MySQL、VPN 接入的 MySQL 四种源库类型。
+<table>
+    <tr>
+        <th width=200>源库类型</th>
+        <th>说明</th>
+    </tr>
+    <tr>
+        <td>有公网 IP 的 MySQL</td>
+        <td>能够通过公网 IP 访问的 MySQL 数据库，所需信息：MySQL 主机地址MySQL 端口MySQL 账号MySQL 密码</td>
+    </tr>
+    <tr>
+        <td>云服务器上的自建 MySQL</td>
+        <td>支持基础网络和私有网络两种环境下基于 CVM 的自建 MySQL 数据库。使用时需要指定 CVM 的实例 ID 和所处的网络环境。所需信息：所属地域：目前仅支持同地域内的 CVM 自建 MySQL 迁移 TencentDB。若 CVM 与 TencentDB 分处于不同地域，使用 CVM 公网网络，选择【有公网 IP 的 MySQL】项实现迁移CVM 网络：支持基础网络和私有网络私有网络：如选择私有网络，需选择所属的私有网络及子网云服务器实例 IDMySQL 端口MySQL 账号MySQL 密码</td>
+    </tr>
+    <tr>
+        <td>专线接入腾讯云的 MySQL</td>
+        <td>本地 IDC 自建 MySQL 使用 专线接入 DC 服务与腾讯云相连接后，可使用DTS数据迁移至腾讯云。所需信息：专线网关：接入腾讯云的数据库服务器所使用的专线网关，了解 专线网关私有网络：专线网关所属的私有网络MySQL主机地址：IDC 内的 MySQL 主机地址，DTS 数据迁移将通过专线网关映射 IP 后访问MySQL 端口MySQL 账号MySQL 密码</td>
+    </tr>
+    <tr>
+        <td>VPN 接入的 MySQL</td>
+        <td>本地 IDC 自建 MySQL 通过 腾讯云 VPN 连接服务 或云服务器上自建 VPN 服务接入与腾讯云相连接后，可使用 DTS 数据迁移至腾讯云。所需信息：所属地域：目前仅支持同地域内的 VPN 服务。VPN 类型：云 VPN 服务或云服务器上自建 VPN。VPN 网关：仅云 VPN 服务需要补充 VPN 网关信息，了解 VPN私有网络：VPN 服务所属的私有网络。MySQL 主机地址：IDC 内的 MySQL 主机地址，DTS 数据迁移将通过专线网关映射 IP 后访问MySQL 端口MySQL 账号MySQL 密码</td>
+    </tr>
+</table>
+
+
+
+
+
+
