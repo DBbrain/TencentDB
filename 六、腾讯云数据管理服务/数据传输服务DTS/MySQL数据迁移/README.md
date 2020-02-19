@@ -66,7 +66,7 @@ set global innodb_stats_on_metadata = 0;
 
 填写任务设置、源库设置和目标库设置。如下图：
 
-![image](../../../Gallerys/tencentdb5-45.jpg)
+![image](../../../Gallerys/tencentdb6-1.jpg)
 
 (1)	**任务设置**
 * 任务名称：为任务指定名称。
@@ -111,19 +111,19 @@ set global innodb_stats_on_metadata = 0;
 * **覆盖 root 账号**：因 root 账号将用于云数据库安全效验，若源库 root 账号不存在，会对后续使用 TencentDB 造成不便。因此在整实例迁移时，需指定是否使用源库 root 账号覆盖目标库 root 账号。如需使用源库 root 账号或目标库未设置 root，则选【是】，如需保留目标库的 root 账号，则选【否】。
 * **是否只读**：选择只读后，在数据迁移过程中，从源数据库迁移的数据在目标数据库只能读取（Read Only），无法更改，直至用户单击完成迁移任务。
 
-![image](../../../Gallerys/tencentdb5-46.jpg)
+![image](../../../Gallerys/tencentdb6-2.jpg)
 
 ### 2.4、数据一致性检测
 选择数据检测类型（可选择全部检测或部分检测或不检测）。
 
 **注意**：选择部分检测选项时，需填写检测比例。
 
-![image](../../../Gallerys/tencentdb5-47.jpg)
+![image](../../../Gallerys/tencentdb6-3.jpg)
 
 ### 2.5、校验迁移任务信息
 在创建完迁移任务后，您需要对迁移任务信息进行校验，单击【下一步：校验任务】进行校验，只有所有校验项通过后才能启动迁移任务，单击【启动】即可。
 
-![image](../../../Gallerys/tencentdb5-48.jpg)
+![image](../../../Gallerys/tencentdb6-4.jpg)
 
 * 通过：表示校验完全通过
 * 警告：表示校验不通过，迁移过程中或迁移后可能影响数据库正常运行但不影响迁移任务的执行。
@@ -152,21 +152,21 @@ set global innodb_stats_on_metadata = 0;
 
 在迁移过程中，如果您需要撤销迁移，可以单击【 撤销 】按钮。
 
-![image](../../../Gallerys/tencentdb5-49.jpg)
+![image](../../../Gallerys/tencentdb6-5.jpg)
 撤销之后效果如下
 
-![image](../../../Gallerys/tencentdb5-50.jpg)
+![image](../../../Gallerys/tencentdb6-6.jpg)
 
 ### 2.9、完成迁移
 **注意**：当迁移处于【未结束】状态时，迁移任务将一直进行，数据持续同步。
 
 当迁移进度达到100%时，可单击右侧【完成】，完成迁移任务。
 
-![image](../../../Gallerys/tencentdb5-51.jpg)
+![image](../../../Gallerys/tencentdb6-7.jpg)
 单击【 完成 】效果如下：
 
-![image](../../../Gallerys/tencentdb5-52.png)
-![image](../../../Gallerys/tencentdb5-53.jpg)
+![image](../../../Gallerys/tencentdb6-8.png)
+![image](../../../Gallerys/tencentdb6-9.jpg)
 
 除了MySQL数据在线导入的情况外，腾讯云还可以对MySQL进行离线迁移。离线迁移这里给出了两种方法，一种是通过控制台迁移，一种是用命令工具进行迁移。
 
