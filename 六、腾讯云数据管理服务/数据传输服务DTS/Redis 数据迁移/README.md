@@ -93,7 +93,7 @@ DTS 服务支持 Redis 集群版迁移，不论是 Redis Cluster、Codis 或者�
 
 ![image](../../../Gallerys/tencentdb6-33.jpg)
 
-4.**启动迁移任务*
+4.**启动迁移任务**
 
 (1)	网络连通性测试成功，单击【保存】。
 (2)	DTS 服务将开始检验迁移任务，满足迁移条件后，即可启动迁移任务。
@@ -138,17 +138,14 @@ redis-port 是一组开源工具集合，主要用于 Redis 节点间的数据�
 
 2.**参数说明：**
 
-(1)	-n：并发写入的任务数量，建议不设置或者设置为 CPU 核心数量 * 2。
-
-(2)	-m：源实例地址，格式为"password"@ip:port，免密码认证下格式为ip:port。
-
-(3)	-t：目标实例地址，格式为"password"@ip:port，免密码认证下格式为ip:port。
-
-(4)	--tmpfile=FILE：临时文件名称。
-
-(5)	--tmpfile-size=SIZW：临时文件最大长度。
-
-(6)	--help：查看帮助命令。
+```apacheconfig
+-n：并发写入的任务数量，建议不设置或者设置为 CPU 核心数量 * 2。
+-m：源实例地址，格式为"password"@ip:port，免密码认证下格式为ip:port。
+-t：目标实例地址，格式为"password"@ip:port，免密码认证下格式为ip:port。
+--tmpfile=FILE：临时文件名称。
+--tmpfile-size=SIZW：临时文件最大长度。
+--help：查看帮助命令。
+```
 
 示例：
 ```apacheconfig
