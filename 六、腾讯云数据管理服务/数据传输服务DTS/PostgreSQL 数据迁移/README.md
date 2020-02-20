@@ -21,7 +21,7 @@
 
 <table>
     <tr>
-        <th>源库类型</th>
+        <th width=150>源库类型</th>
         <th>说明</th>
     </tr>
     <tr>
