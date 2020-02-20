@@ -47,7 +47,7 @@
 
 3.	选择【SSH】选项，配置端口为49001（此处端口默认为22，需要改为49001）。
 
-![image](../../../Gallerys/tencentdb6-57.jpg)
+&nbsp;&nbsp; ![image](../../../Gallerys/tencentdb6-57.jpg)
 
 4. 选择【Server status】选项，启动 ssh server。
 
@@ -55,7 +55,7 @@
 
 6.	选择【Users】选项，添加用户 tencent_vpc_migrate（该用户名不可更改），密码tencent_vpc_migrate（该密码不可更改），配置如下图所示：
 
-![image](../../../Gallerys/tencentdb6-58.jpg)
+&nbsp;&nbsp; ![image](../../../Gallerys/tencentdb6-58.jpg)
 
 7.	使用 D:\dbbackup\（此路径不可改变）为 SQL Server 迁移中使用的备份文件夹，选择【SFTP】选项，并将此路径配置到“SFTP home path”中。
 
