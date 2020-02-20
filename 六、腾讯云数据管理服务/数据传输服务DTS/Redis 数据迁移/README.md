@@ -166,6 +166,45 @@ redis-port 是一组开源工具集合，主要用于 Redis 节点间的数据�
 
 (4)	停止迁移，通过 Ctrl+C 命令或者其他方式终止工具的执行，即可停止数据同步。
 
+### 2.2、使用 redis-restore 导入数据
+
+redis-restore 工具支持将 Redis 的备份文件（RDB）导入到指定 Redis 实例，同时也支持导入 AOF 文件，支持 Redis 2.8、3.0、3.2、4.0 版本的 RDB 文件格式。
+
+1.**参数说明：**
+```apacheconfig
+-n：并发写入的任务数量，建议不设置或者设置为 CPU 核心数量 * 2。
+-i：RDB 文件路径。
+-t：目标实例地址，格式为"password"@ip:port，免密码认证下格式为ip:port。
+-a：AOF 文件路径。
+--db=DB：备份文件导入 Redis 目标实例的 DB ID，须和源实例 DB ID 保持一致。
+--unixtime-in-milliseconds=EXPR：导入数据的同时更新 Key 过期时间值。
+--help：查看帮助命令。
+```
+示例：
+```apacheconfig
+./redis-restore dump.rdb -t 127.0.0.1:6379
+```
+
+### 2.3、使用 redis-dump 备份数据
+
+redis-dump 支持将 Redis 的数据备份成 RDB 文件，同时还支持备份 AOF 增量数据。
+
+**说明**：腾讯云数据库 Redis 暂时不支持使用 redis-dump 工具进行备份，您可以使用 Redis 数据库控制台或者 API 进行数据备份和下载；以及使用 redis-dump 工具来备份您自建的 Redis 实例。
+
+1.**参数说明：**
+```apacheconfig
+-n：并发写入的任务数量，建议不设置或者设置为 CPU 核心数量 * 2。
+-m：Redis 实例地址，格式为"password"@ip:port，免密码认证下格式为ip:port。
+-o：备份输出的 RDB 文件路径。
+-a：备份输出的 AOF 文件路径。
+--help：查看帮助。
+```
+示例：
+```apacheconfig
+./redis-dump  127.0.0.1:6379 -o dump.rdb
+```
+
+
 
 
 
