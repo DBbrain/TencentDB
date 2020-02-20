@@ -47,7 +47,7 @@
 以 CVM 上的 Redis 实例为例说明，外网实例迁移下同。
 <table>
     <tr>
-        <th>字段</th>
+        <th width=150>字段</th>
         <th>描述</th>
         <th>备注</th>
         <th>必填</th>
