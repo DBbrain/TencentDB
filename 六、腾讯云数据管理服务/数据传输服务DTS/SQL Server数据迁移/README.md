@@ -8,7 +8,7 @@
 
 3.单击【创建任务】，填写任务名称、源库信息、目标库信息，源实例类型选择【云服务器自建SQL Server数据库】。
 
-![image](../../../Gallerys/tencentd6-52.jpg)
+![image](../../../Gallerys/tencentdb6-52.jpg)
 
 4.单击【下一步】后，需先对 源 SQL Server 实例进行相关配置 再继续 配置迁移任务。
 
@@ -23,19 +23,19 @@
 
 2.在【连接】里选择【允许远程连接到此服务器】，并设置合理的远程查询超时值。
 
-![image](../../../Gallerys/tencentd6-53.jpg)
+![image](../../../Gallerys/tencentdb6-53.jpg)
 
 3.在【安全性】里选择【SQL Server 和 Windows 身份验证模式】。
 
-![image](../../../Gallerys/tencentd6-54.jpg)
+![image](../../../Gallerys/tencentdb6-54.jpg)
 
 4.开启网络协议 TCP/IP。
 
-![image](../../../Gallerys/tencentd6-55.jpg)
+![image](../../../Gallerys/tencentdb6-55.jpg)
 
 5.启动内置帐户选择【localsystem】。
 
-![image](../../../Gallerys/tencentd6-56.jpg)
+![image](../../../Gallerys/tencentdb6-56.jpg)
 
 6.Windows 防火墙允许 SQL Server 端口通信，以及445端口通信（基础网络）或49001端口通信（私有网络）。
 
@@ -47,7 +47,7 @@
 
 (3)	选择【SSH】选项，配置端口为49001（此处端口默认为22，需要改为49001）。
 
-![image](../../../Gallerys/tencentd6-57.jpg)
+![image](../../../Gallerys/tencentdb6-57.jpg)
 
 (4)	选择【Server status】选项，启动 ssh server。
 
@@ -55,7 +55,7 @@
 
 (6)	选择【Users】选项，添加用户 tencent_vpc_migrate（该用户名不可更改），密码tencent_vpc_migrate（该密码不可更改），配置如下图所示：
 
-![image](../../../Gallerys/tencentd6-58.jpg)
+![image](../../../Gallerys/tencentdb6-58.jpg)
 
 (7)	使用 D:\dbbackup\（此路径不可改变）为 SQL Server 迁移中使用的备份文件夹，选择【SFTP】选项，并将此路径配置到“SFTP home path”中。
 
@@ -63,7 +63,7 @@
 
 选择迁移类型、设置数据库（选择需要迁移的库表），单击【保存并校验】，如校验不通过可按错误提示完成修复。
 
-![image](../../../Gallerys/tencentd6-59.jpg)
+![image](../../../Gallerys/tencentdb6-59.jpg)
 
 任务创建完后，返回任务列表，此时任务状态为【初始化】，选择并单击【启动】同步任务。
 
