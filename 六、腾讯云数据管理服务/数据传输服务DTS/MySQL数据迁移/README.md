@@ -238,5 +238,58 @@ shell > mysql -h hostname -P port -u username -p -d dbname < bak_pathname
 
 ![image](../../../Gallerys/tencentdb6-19.jpg)
 
+### 3.2、命令行工具迁移数据
+
+1.使用 MySQL 命令行工具 mysqldump 生成待导入的 SQL 文件，方式如下：
+```apacheconfig
+shell > mysqldump [options] db_name [tbl_name ...] > bak_pathname
+其中，options 为导出选项，db_name 为数据库名称，tbl_name 为表名称，bak_pathname 为导出路径名。
+更多 mysqldump 导出数据说明，请参考MySQL官方手册。
+```
+**注意**：使用 mysqldump 导出的数据文件必须兼容所购买的云数据库 MySQL 版本的 SQL 规范，可登录云数据库通过 select version(); 获取相应的 MySQL 版本信息。生成的 SQL 文件名称允许英文/数字/下划线，但不能包含 “test” 字符。
+
+2.还原数据库时，可以通过 MySQL 命令行工具进行还原，方式如下：
+```apacheconfig
+shell > mysql -h hostname -P port -u username -p < bak_pathname
+```
+3.其中，hostname 为还原数据的目标主机，port 为目标主机的端口，username 为目标主机的数据库用户名，bak_pathname 为备份文件的完整路径。
+
+## 4、通过CVM主机Linux系统迁移数据
+
+CVM 主机访问数据库请参考 访问 MySQL 数据库。
+
+1.以云数据库上的 db_blog 数据库为例。登录 CVM 主机，使用 MySQL 命令行工具 mysqldump 生成待导入的 SQL 文件。
+
+![image](../../../Gallerys/tencentdb6-20.jpg)
+
+2.通过 MySQL 命令行工具进行还原，本例将数据还原到 CVM 服务器上。可以查看到备份的数据库已导入到目标服务器对应的数据库中。
+
+![image](../../../Gallerys/tencentdb6-21.jpg)
+
+### 4.1、导入数据文件字符集编码问题
+
+1.云数据库导入数据文件如果没有指定字符集编码，以云数据库设置的字符集编码执行。
+
+2.如果导入数据文件中有指定的字符集编码，则以指定的字符集编码执行。
+
+3.如果导入的数据文件的字符集编码与云数据库当前字符集编码不同，会造成乱码。
+
+### 4.2、使用腾讯云数据迁移产品 DTS 将阿里云数据库（RDS）数据迁移到腾讯云
+
+下面我们讲一下使用腾讯云提供的数据迁移产品 DTS 将阿里云数据库（RDS）的数据迁移到腾讯云云数据库中。数据库源要求为阿里云云数据库 MySQL 5.6 或 5.7，具体操作步骤如下：
+
+1.获取源数据库基本信息和 AccessKey
+
+1) 登录 RDS 管理控制台，选择目标实例。
+2) 在目标实例的基础信息页即可获取我们所需的信息，具体如图所示：
+
+![image](../../../Gallerys/tencentdb6-22.jpg)
+
+**注意**：阿里云提供的外网地址需要将其转化成 IP 格式。
+
+3) 将鼠标悬停于右上方头像处，在出现的下拉菜单中选择【accesskeys】，进入页面后即可获取所需的 Accesskey。
+
+![image](../../../Gallerys/tencentdb6-23.jpg)
+
 
 
