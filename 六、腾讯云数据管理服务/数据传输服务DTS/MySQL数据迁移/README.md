@@ -198,7 +198,45 @@ shell > mysql -h hostname -P port -u username -p -d dbname < bak_pathname
 
 4.选中需要导出的数据库，单击【下一步】。
 
+![image](../../../Gallerys/tencentdb6-11.jpg)
 
+5.单击 本地下载 中的【下载】，将备份文件下载至本地。
+
+![image](../../../Gallerys/tencentdb6-12.jpg)
+
+6.记录完整的路径名称。
+
+本例中的完整路径为： F:\download\cdb147691_backup_20170717050142
+
+![image](../../../Gallerys/tencentdb6-13.jpg)
+
+7.进入命令提示符，通过 MySQL 命令行工具进行还原。
+
+![image](../../../Gallerys/tencentdb6-14.jpg)
+
+8.登录 MySQL 数据库可以查看到备份的数据库已经还原到服务器内。
+
+![image](../../../Gallerys/tencentdb6-15.jpg)
+
+#### 3.1.2、Windows 迁移数据表
+
+1.以 db_blog 下的 t_blog 数据表为例，从云数据库数据控制台下载备份文件。
+
+![image](../../../Gallerys/tencentdb6-16.jpg)
+
+2.从云数据库数据控制台下载备份文件，记录完整的路径名称。
+
+本例中的完整路径为 F:\download\cdb147691_backup_20170718050146
+
+![image](../../../Gallerys/tencentdb6-17.jpg)
+
+3.进入命令提示符，通过 MySQL 命令行工具进行还原。
+
+![image](../../../Gallerys/tencentdb6-18.jpg)
+
+4.登录 MySQL 数据库可以查看到备份的数据表已经还原到服务器内。
+
+![image](../../../Gallerys/tencentdb6-19.jpg)
 
 
 
