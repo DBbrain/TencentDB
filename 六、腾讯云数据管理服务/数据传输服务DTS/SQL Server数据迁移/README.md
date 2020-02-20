@@ -41,23 +41,23 @@
 
 7.（可选）【CVM 网络】选择【私有网络】时，需配置 freeSSHd 工具。
 
-(1)	下载安装 freeSSHd，默认安装即可，同意启动 freeSSHd 服务。
+1. 下载安装 freeSSHd，默认安装即可，同意启动 freeSSHd 服务。
 
-(2)	双击 freeSSHd 桌面图标，右键任务栏 freeSSHd 图标打开 setting 设置页面，进行配置。
+2.	双击 freeSSHd 桌面图标，右键任务栏 freeSSHd 图标打开 setting 设置页面，进行配置。
 
-(3)	选择【SSH】选项，配置端口为49001（此处端口默认为22，需要改为49001）。
+3.	选择【SSH】选项，配置端口为49001（此处端口默认为22，需要改为49001）。
 
 ![image](../../../Gallerys/tencentdb6-57.jpg)
 
-(4)	选择【Server status】选项，启动 ssh server。
+4. 选择【Server status】选项，启动 ssh server。
 
-(5)	选择【Authentication】选项，选择【Allowed】允许密码授权。
+5.	选择【Authentication】选项，选择【Allowed】允许密码授权。
 
-(6)	选择【Users】选项，添加用户 tencent_vpc_migrate（该用户名不可更改），密码tencent_vpc_migrate（该密码不可更改），配置如下图所示：
+6.	选择【Users】选项，添加用户 tencent_vpc_migrate（该用户名不可更改），密码tencent_vpc_migrate（该密码不可更改），配置如下图所示：
 
 ![image](../../../Gallerys/tencentdb6-58.jpg)
 
-(7)	使用 D:\dbbackup\（此路径不可改变）为 SQL Server 迁移中使用的备份文件夹，选择【SFTP】选项，并将此路径配置到“SFTP home path”中。
+7.	使用 D:\dbbackup\（此路径不可改变）为 SQL Server 迁移中使用的备份文件夹，选择【SFTP】选项，并将此路径配置到“SFTP home path”中。
 
 ## 2、配置迁移任务
 
