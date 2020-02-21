@@ -24,41 +24,41 @@
 
 (1)	登录数据库审计控制台，在左侧导航选择【审计规则】页。
 
-![image](../../Gallerys/tencentdb5-60.jpg)
+![image](../../Gallerys/tencentdb6-60.jpg)
 
 (2)	单击【新建规则】进入创建页，填写规则名称，单击【下一步】。
 
 (3)	选择所需的审计方式和参数，单击【创建】即可。
 
-![image](../../Gallerys/tencentdb5-61.jpg)
+![image](../../Gallerys/tencentdb6-61.jpg)
 
 2.**创建审计策略**
 
 (1)	在左侧导航选择【审计策略】页，单击【新建策略】进入创建页。
 
-![image](../../Gallerys/tencentdb5-62.jpg)
+![image](../../Gallerys/tencentdb6-62.jpg)
 
 (2)	选择目标审计实例和所需启动的审计规则，单击【确定】即可启动。
 
-![image](../../Gallerys/tencentdb5-63.jpg)
+![image](../../Gallerys/tencentdb6-63.jpg)
 
 (3)	返回审计策略列表，单击策略【操作】列的【修改】。
 
-![image](../../Gallerys/tencentdb5-64.jpg)
+![image](../../Gallerys/tencentdb6-64.jpg)
 
 (4)	在弹出的对话框，单击【是否启用】滑块，可启动或关闭审计规则。
 
-![image](../../Gallerys/tencentdb5-65.jpg)
+![image](../../Gallerys/tencentdb6-65.jpg)
 
 (5)	在左侧导航选择【审计日志】页，可查看审计效果。
 
-![image](../../Gallerys/tencentdb5-66.jpg)
+![image](../../Gallerys/tencentdb6-66.jpg)
 
 3.**基于条件定位**
 
 (1)	在审计日志页，单击时间框，选择时间段，可查看所选时间段内相关审计效果。
 
-![image](../../Gallerys/tencentdb5-67.jpg)
+![image](../../Gallerys/tencentdb6-67.jpg)
 
 (2)	单击审计实例框，选择所需实例，可查看相关审计效果。
 
