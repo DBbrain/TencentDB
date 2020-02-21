@@ -262,6 +262,6 @@ SQL 优化器为用户提供一键优化 SQL 语句功能，并给出对应执�
 
 优化建议中会针对输入的 SQL，提供专业的优化建议，包括但不限于索引建议、SQL 改写建议等。用户可以根据 DBbrain 提供的优化建议，对存在性能问题的 SQL 进行优化。
 
-![image](../../../Gallerys/tencentdb6-106.jpg)
+![image](../../../Gallerys/tencentdb6-107.jpg)
 
 
