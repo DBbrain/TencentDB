@@ -181,6 +181,7 @@ DBbrain实例管理页提供了“实例列表”和“异常告警”两个页�
 ![image](../../../Gallerys/tencentdb6-93.jpg)
 
 3.单击某条聚合的 SQL 模板行，右侧边会弹出 SQL 的具体分析和统计数据。
+
 (1)	在分析页，您可查看完整的 SQL 模板、SQL 样例以及优化建议和说明，您可根据 DBbrain 给出的专家建议优化 SQL，提升 SQL 质量，降低延迟。
 
 ![image](../../../Gallerys/tencentdb6-94.jpg)
